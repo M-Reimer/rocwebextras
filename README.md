@@ -26,7 +26,7 @@ That's why this Addon was created. It by default doesn't need any permissions. I
 Contributing
 ------------
 
-All the code in this repository is **licensed under GPL 3.0** (and so incompatible to the RocWeb licensing by intention). So if you want to contribute features to RocWeb Extras in an open source way, feel free to create Issues or Pull Requests.
+All the code in this repository is **licensed under GPL 3.0** (and so incompatible to the RocRail licensing by intention). So if you want to contribute features to RocWeb Extras in an open source way, feel free to create Issues or Pull Requests.
 
 Also feel free to write Issues or Pull Requests in german language!
 
