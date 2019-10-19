@@ -17,6 +17,8 @@
 */
 
 var script = document.createElement("script");
-script.textContent = "(" + KeyboardFeature.toString() + ")();";
+// Add additional features here
+if (KeyboardFeature !== undefined)
+  script.textContent += "(" + KeyboardFeature.toString() + ")();";
 document.documentElement.appendChild(script);
 document.documentElement.removeChild(script);
