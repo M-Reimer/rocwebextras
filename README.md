@@ -23,12 +23,10 @@ Another problem is that keyboard support was requested in the forums but rejecte
 
 That's why this Addon was created. It by default doesn't need any permissions. If you add your RocWeb URL in the Addon settings, it will request permission for just this one URL.
 
-**To the RocRail developers** Keep in mind that the license in this repository is incompatible to your licensing! So don't even think about copying code form here. Thanks.
-
 Contributing
 ------------
 
-All the code in this repository is licensed under GPL 3.0. So if you want to contribute features to RocWeb Extras in an open source way, feel free to create Issues or Pull Requests.
+All the code in this repository is **licensed under GPL 3.0** (and so incompatible to the RocWeb licensing by intention). So if you want to contribute features to RocWeb Extras in an open source way, feel free to create Issues or Pull Requests.
 
 Also feel free to write Issues or Pull Requests in german language!
 
