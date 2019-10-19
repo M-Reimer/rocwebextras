@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "RocWeb Extras",
+  "description": "GPL 3.0 licensed extra features for RocWeb",
+  "version": "1.0.0",
+  "homepage_url": "https://github.com/M-Reimer/rocwebextras",
+  "author": "Manuel Reimer",
+  "applications": {
+    "gecko": {
+      "id": "{262cdc38-1fe8-4941-88c9-10cc6671d5cf}"
+    }
+  },
+
+  "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["fetures/keyboard.js", "contentscript.js"],
+    "run_at": "document_start"
+  }
+  ],
+
+  "options_ui": {
+    "page": "options.html",
+    "browser_style": true,
+    "open_in_tab": false
+  },
+
+  "optional_permissions": [
+    "<all_urls>"
+  ]
+}
