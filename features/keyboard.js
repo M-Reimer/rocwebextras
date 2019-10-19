@@ -16,6 +16,31 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+// Keyboard handler for RocWeb.
+// So far only basic features. This handler is meant to be used with an
+// Arduino-based hardware rotary encoder device which needs to be programmed
+// to send the keys "+", "-" and "*"
 function KeyboardFeature() {
-  alert("test");
+  function OnKeyPress(aEvent) {
+    var popup = document.getElementById("popupThrottle-popup");
+    if (!popup.classList.contains("ui-popup-active"))
+      return;
+
+    switch(aEvent.code) {
+    case "NumpadAdd":
+      //console.log("Rechts");
+      onVUp();
+      break;
+    case "NumpadSubtract":
+      //console.log("Links");
+      onVDown();
+      break;
+    case "NumpadMultiply":
+      //console.log("Druck");
+      onDirection();
+      break;
+    }
+  }
+
+  document.addEventListener("keypress", OnKeyPress);
 }
