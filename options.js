@@ -36,7 +36,7 @@ async function OnNewUrlClick() {
   url.username = "";
   url.password = "";
   url = url.toString();
-  alert(url);
+
   // https://bugzil.la/1589758
   // Adding a new origin will *always* throw an exception.
   // This exception can not be prevented with a "try/catch" construct
