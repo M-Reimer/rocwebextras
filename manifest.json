@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "RocWeb Extras",
   "description": "GPL 3.0 licensed extra features for RocWeb",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage_url": "https://github.com/M-Reimer/rocwebextras",
   "author": "Manuel Reimer",
   "applications": {
