@@ -16,9 +16,17 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-var script = document.createElement("script");
-// Add additional features here
-if (KeyboardFeature !== undefined)
-  script.textContent += "(" + KeyboardFeature.toString() + ")();";
-document.documentElement.appendChild(script);
-document.documentElement.removeChild(script);
+// Even a change of the hash in the URL triggers a "complete" event.
+// So we have to get sure our code is injected only once for the first
+// "Complete" event for this page.
+// We can do this with some custom property to the "window" object as reloading
+// the page resets the window object.
+if (!window.addon_rwe_loaded) {
+  var script = document.createElement("script");
+  // Add additional features here
+  if (KeyboardFeature !== undefined)
+    script.textContent += "(" + KeyboardFeature.toString() + ")();";
+  document.documentElement.appendChild(script);
+  document.documentElement.removeChild(script);
+  window.addon_rwe_loaded = true;
+}
