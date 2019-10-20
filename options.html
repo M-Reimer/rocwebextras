@@ -2,14 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <style>
+      button, input {
+        height: 32px;
+      }
+      #list_urls {
+        width: 100%
+      }
+      #input_new_url {
+        width: 80%;
+      }
+      form > * {
+        font-size: 16px;
+      }
+    </style>
   </head>
   <body>
+    <h1 id="contextmenus_headline">List of RocWeb hosts</h1>
     <form>
-      <h1 id="contextmenus_headline">List of RocWeb hosts</h1>
-      <input type="text" placeholder="Paste your RocWeb URL here" id="input_new_url" style="width: 16em"/>
+      <input type="text" placeholder="Paste your RocWeb URL here" id="input_new_url"/>
       <button id="button_new_url">Add</button>
       <br/>
-      <select id="list_urls" size="5" style="width: 24em">
+      <select id="list_urls" size="7" >
       </select>
       <br/>
       <button id="button_delete">Delete selected</button>
