@@ -22,11 +22,26 @@ const button_delete = document.getElementById("button_delete");
 const list_urls = document.getElementById("list_urls");
 
 async function OnNewUrlClick() {
+  // Get user input and check that it's not empty
+  let url = input_new_url.value;
+  if (!url)
+    return;
+
+  // We don't want the user to have to care about passing a valid match pattern
+  // So filter out parts of the URL that are not valid for a match pattern
+  url = new URL(url);
+  url.hash = "";
+  url.port = "";
+  url.search = "";
+  url.username = "";
+  url.password = "";
+  url = url.toString();
+  alert(url);
   // https://bugzil.la/1589758
   // Adding a new origin will *always* throw an exception.
   // This exception can not be prevented with a "try/catch" construct
   try {
-    await browser.permissions.request({origins: [input_new_url.value]});
+    await browser.permissions.request({origins: [url]});
   } catch(e) {}
 }
 
